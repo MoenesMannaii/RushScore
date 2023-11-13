@@ -8,7 +8,7 @@ export const Wins = () => {
   <div className="container mx-auto flex flex-col lg:flex-row items-center gap-6">
     <div className="lg:w-1/2">
       <img src={images.WORLDCUP.src} alt="Featured Image 1" className="rounded-t-xl" />
-      <div className="px-9 pt-10 pb-14 bg-[#8a38f4] rounded-b-lg">
+      <div className="px-9 pt-10 pb-14 bg-[#483d8b] rounded-b-lg">
         <div className="text-white space-y-4">
           <h3 className="text-xl uppercase font-bold lead-xl bold">Argentina vs France</h3>
           <div className="text-lg font-light">Quick Highlights :</div>
@@ -30,7 +30,7 @@ export const Wins = () => {
     </div>
     <div className="lg:w-1/2 mt-6 lg:mt-0">
       <img src={images.ALNASR.src} alt="Featured Image 1" className="rounded-t-xl" />
-      <div className="px-9 pt-10 pb-14 bg-[#8a38f4] rounded-b-lg">
+      <div className="px-9 pt-10 pb-14 bg-[#483d8b] rounded-b-lg">
         <div className="text-white space-y-4">
           <h3 className="text-xl uppercase font-bold lead-xl bold">Al Nasr vs Al Ahli Saudi</h3>
           <div className="text-lg font-light">Quick Highlights :</div>

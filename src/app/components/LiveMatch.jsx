@@ -29,7 +29,7 @@ export const LiveMatch = () => {
         team1Logo: images.EST.src,
         team2: 'Étoile Sportive du Sahel',
         team2Logo: images.ESS.src,
-        time: '20:00',
+        time: 'Live',
         timezone: 'Bein Sport 4K',
         league: 'دوري ابطال اوروبا',
         channel: 'Bein Sport HD1',
@@ -60,29 +60,29 @@ export const LiveMatch = () => {
         <h2 className="bg-[#8a38f4] flex items-center px-2 py-2 text-2xl font-semibold"><BiFootball />&nbsp;Today's Football Matches</h2>
  <div className='p-2 lg:p-0'>
         <div className="my-4 border border-[#8a38f4] divide-y divide-[#8a38f4]">
-          {matches.map((match, index) => (
-            <div className="live-match" key={index}>
-              <a className="fullink" href="#"></a>
-              <div className="live-match-teams">
-                <div className="teams">
-                  <div className="team_one">
-                    <span>
-                      <img src={match.team1Logo} alt={`${match.team1} Logo`} />
-                      <div className="text-xs lg:text-sm">{match.team1}</div>
-                    </span>
-                  </div>
-                  <strong className="bg-[#6419c7] text-xs lg:text-sm">- {match.time} -</strong>
-                  <div className="team_two">
-                    <span>
-                      <img src={match.team2Logo} alt={`${match.team2} Logo`} />
-                      <div className="text-xs lg:text-sm">{match.team2}</div>
-                    </span>
-                  </div>
-                </div>
-            
-              </div>
-            </div>
-          ))}
+        {matches.map((match, index) => (
+  <div className="live-match" key={index}>
+    <a className="fullink" href="#"></a>
+    <div className="live-match-teams relative">
+      <div className="teams flex items-center justify-center">
+        <div className="team_one">
+          <span>
+            <img src={match.team1Logo} alt={`${match.team1} Logo`} />
+            <div className="text-xs lg:text-sm">{match.team1}</div>
+          </span>
+        </div>
+        <strong className="absolute bg-[#6419c7] text-white text-xs lg:text-sm py-1 px-2">{match.time}</strong>
+        <div className="team_two">
+          <span>
+            <img src={match.team2Logo} alt={`${match.team2} Logo`} />
+            <div className="text-xs lg:text-sm">{match.team2}</div>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+))}
+
           </div>
         </div>
       </div>

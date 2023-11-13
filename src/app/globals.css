@@ -242,7 +242,6 @@ body {
 
 .teams {
   position: relative;
-  height: 48px;
   line-height: 48px;
 }
 
@@ -258,7 +257,6 @@ body {
 
 .team_one {
   float: right;
-  padding-left: 30px;
   width: 50%;
   position: relative;
   z-index: 2;
@@ -266,7 +264,6 @@ body {
 
 .team_two {
   float: left;
-  padding-right: 30px;
   width: 50%;
   position: relative;
   z-index: 2;
@@ -280,13 +277,6 @@ body {
   margin: 0 5px;
 }
 
-.team_one {
-  padding-left: 20px;
-}
-
-.team_two {
-  padding-right: 20px;
-}
 
 .live-match {
   height: 7rem;
@@ -305,7 +295,7 @@ body {
   padding: 0;
 }
 
-.teams strong {
+/* .teams strong {
   color: #fff;
   height: 36px;
   top: 35px;
@@ -317,7 +307,7 @@ body {
   width: 65px;
   z-index: 1;
   border-radius: 5px;
-}
+} */
 
 
 /* TOP VIDEOS STYLES */

@@ -22,7 +22,7 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="lg:w-full flex items-center justify-center h-96">
+      <div className="lg:w-full flex items-center justify-center h-64 lg:h-96">
         <img
           className="object-contain w-full h-full mx-auto lg:w-full"
           src="https://res.cloudinary.com/dww70arvk/image/upload/v1699215132/a6x9ohhrygqx9kh792fz.png"

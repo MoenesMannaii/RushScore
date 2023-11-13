@@ -3,7 +3,7 @@ import * as images from '../../assets/index'
 const Footer = () => {
   return (
     <footer>
-    <div className="container flex flex-col items-center justify-between px-6 py-8 mx-auto lg:flex-row">
+    <div className="container flex flex-col items-center justify-between px-4 py-8 mx-auto lg:flex-row">
         <a href="#">
             <img className="w-auto h-10" src={images.LOGO.src} alt="LOGO" />
         </a>
@@ -33,9 +33,10 @@ const Footer = () => {
             </a>
         </div>
 
-        <p className="flex items-center mt-6 text-xs lg:text-sm text-gray-400 lg:mt-0">© Copyright 2023 - Made with
+<p className="flex items-center mt-6 text-xs lg:text-sm text-gray-400 lg:mt-0">© Copyright 2023- Made with
         <img src={images.TN.src} className='w-auto h-4 px-2'/>
         by Moenes Mannai </p>
+        
     </div>
 </footer>
   )
