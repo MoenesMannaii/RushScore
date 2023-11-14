@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
       <div className="bg-linear-pink-invert">
-        <div className="mx-auto container py-8 flex flex-col items-center justify-center">
+        <div className="mx-auto container mt-8 py-8 flex flex-col items-center justify-center">
           <div>
             <img src={images.LOGO.src} width={190} alt="Logo" />
           </div>

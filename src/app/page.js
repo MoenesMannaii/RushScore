@@ -8,6 +8,7 @@ import { Wins } from "./components/Wins";
 import { Updates } from "./components/Updates";
 import { LiveMatch } from "./components/LiveMatch";
 import { TopVideos } from "./components/TopVideos";
+import { OfTheYear } from "./components/OfTheYear";
 
 const page = () => {
   return (
@@ -19,6 +20,7 @@ const page = () => {
       <Reviews />
       <Updates />
       <TopVideos />
+      <OfTheYear />
       <Partners />
       <Footer />
     </>

@@ -15,6 +15,9 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --white : #fff;
+    --purple : #8a34f4;
+
   }
 }
 
@@ -23,9 +26,21 @@ body {
   background-color: #0c071a;
  /*  border-top: 5px solid #8a34f4; */
   /*  background-color: #260405; */
+  color: var(--white);
   font-family: "Poppins", sans-serif !important;
   /*  filter: grayscale(10%); */
 }
+
+.fixed-navbar {
+  transition:0.7s ease;
+  background-color: #191134;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px dashed var(--purple);
+}
+
 
 
 .match {
@@ -208,13 +223,6 @@ body {
   display: block;
   height: 94px;
   position: relative;
-/* 
-  box-shadow: rgba(106, 10, 195, 0.57) 0px 8px 8px -10px;
-
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s; 
-
-  border-radius: 5px; */
   margin: 0px auto;
 
 }
@@ -296,35 +304,22 @@ body {
   padding: 0;
 }
 
-/* .teams strong {
-  color: #fff;
-  height: 36px;
-  top: 35px;
-  line-height: 36px;
-  margin-right: -40px;
-  position: absolute;
-  right: 50%;
-  text-align: center;
-  width: 65px;
-  z-index: 1;
-  border-radius: 5px;
-} */
-
-
 /* TOP VIDEOS STYLES */
 .text-container {
-  max-width: 100%; /* Adjust as needed */
+  max-width: 100%;
   
 }
-/* Add this CSS to your stylesheet */
 
-/* Additional specificity for the slider component */
 .slick-slider .slick-dots li button:before {
-  color: #fff;
+  color:var(--white);
 }
 .slick-dots li.slick-active button:before {
-  color: #8a34f4!important;
+  color: var(--purple)!important;
 }
 .slick-dots li button:before {
   opacity: 0.6!important;
+}
+.slick-dots {
+  position: relative!important;
+  bottom: 15px!important;
 }

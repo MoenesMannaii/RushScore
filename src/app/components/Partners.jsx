@@ -13,8 +13,8 @@ export const Partners = () => {
   ];
 
   return (
-    <div className="container py-16 mx-auto text-center">
-    <h2 className="bg-[#8a38f4] flex items-center px-2 py-2 text-2xl font-semibold"><BiFootball />&nbsp;Trusted By</h2>
+    <div className="container mx-auto text-center">
+    <h2 className="bg-[#8a38f4] flex items-center px-2 py-2 text-2xl font-semibold"><BiFootball />&nbsp;Trusted Partnerships</h2>
 
       <div className="max-w-screen-xl mx-auto mt-20">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">

@@ -15,12 +15,12 @@ const CustomVideoPlayer = ({ videoSrc, thumbnailSrc, title, link }) => {
   };
 
   return (
-    <div className="containr mx-auto py-8">
+    <div className="container mx-auto py-8">
       <div style={{ position: "relative", padding: "1rem" }}>
         {isVideoVisible && (
           <iframe
-            width="380.4px"
-            height="209.5"
+            width="100%"
+            height="auto"
             src={videoSrc}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -32,17 +32,17 @@ const CustomVideoPlayer = ({ videoSrc, thumbnailSrc, title, link }) => {
             <img
               src={thumbnailSrc}
               alt={title}
-              style={{ width: "380.4px", height: "209.5px" }}
+              style={{ width: "100%", height: "auto" }}
               className="thumbnail border border-[#8a38f4]"
             />
           </div>
         )}
         <div className="text-container">
-          <h4 className="py-4 text-base font-medium lg:text-lg w-80">
+          <h4 className="py-4 text-base font-medium lg:text-lg md:w-full">
             {title}
           </h4>
           <a
-            className="bg-[#8a38f4] p-2 rounded-md"
+            className="bg-[#8a38f4] p-2 rounded-md inline-block"
             target="_blank"
             href={link}
           >

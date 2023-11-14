@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { RiMenu2Fill } from "react-icons/ri";
@@ -32,18 +32,35 @@ function classNames(...classes) {
 export default function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchHeight, setSearchHeight] = useState(0);
+  const [isSticky, setIsSticky] = useState(false);
 
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
     setSearchHeight((prevHeight) => (prevHeight === 0 ? 12 : 0));
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      // Set isSticky to true if the scroll position is greater than a certain threshold
+      setIsSticky(scrollPosition > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const navbarClass = isSticky ? "fixed-navbar" : "";
+
   return (
     <>
-      <Disclosure as="nav" className="bg-[#130D25]">
+      <Disclosure as="nav" className={`bg-[#130D25] ${navbarClass}`}>
         {({ open }) => (
           <>
-            <div className="container mx-auto px-2">
+            <div className="container mx-auto">
               <div className="relative flex h-16 items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                   <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-[#8a34f4] focus:outline-none">
@@ -201,15 +218,15 @@ export default function Navbar() {
         )}
       </Disclosure>
       <div className="container mx-auto flex items-center transition duration-700 ease-in-out">
-        {isSearchOpen && (
-          <div className="relative w-full mt-2">
-            <input
-              type="text"
-              className="w-full flex px-4 py-2 tracking-widest focus:outline-none focus:ring-1  focus:ring-[#8a38f4] bg-[#130D25] text-white"
-              placeholder="Start searching..."
-            />
-          </div>
-        )}
+         {isSearchOpen && (
+  <div className="relative w-full mt-2">
+    <input
+      type="text"
+      className="w-full flex px-4 py-2 tracking-widest focus:outline-none focus:ring-1 focus:ring-[#8a38f4] bg-[#130D25] text-white border border-[#8a38f4] rounded-md"
+      placeholder="Start searching..."
+    />
+  </div>
+)}
       </div>
     </>
   );
