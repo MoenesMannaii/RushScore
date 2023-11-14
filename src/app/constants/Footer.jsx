@@ -3,7 +3,7 @@ import * as images from '../../assets/index'
 const Footer = () => {
   return (
     <footer>
-    <div className="container flex flex-col items-center justify-between px-4 py-8 mx-auto lg:flex-row">
+    <div className="container flex flex-col items-center justify-between py-8 mx-auto lg:flex-row">
         <a href="#">
             <img className="w-auto h-10" src={images.LOGO.src} alt="LOGO" />
         </a>

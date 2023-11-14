@@ -27,6 +27,7 @@ body {
   /*  filter: grayscale(10%); */
 }
 
+
 .match {
   background-color: var(--color-bg-primary);
   display: flex;
@@ -311,4 +312,19 @@ body {
 
 
 /* TOP VIDEOS STYLES */
+.text-container {
+  max-width: 100%; /* Adjust as needed */
+  
+}
+/* Add this CSS to your stylesheet */
 
+/* Additional specificity for the slider component */
+.slick-slider .slick-dots li button:before {
+  color: #fff;
+}
+.slick-dots li.slick-active button:before {
+  color: #8a34f4!important;
+}
+.slick-dots li button:before {
+  opacity: 0.6!important;
+}

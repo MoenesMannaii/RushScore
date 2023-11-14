@@ -19,7 +19,7 @@ const CustomVideoPlayer = ({ videoSrc, thumbnailSrc, title, link }) => {
       <div style={{ position: "relative", padding: "1rem" }}>
         {isVideoVisible && (
           <iframe
-            width="347.4"
+            width="380.4px"
             height="209.5"
             src={videoSrc}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -32,12 +32,12 @@ const CustomVideoPlayer = ({ videoSrc, thumbnailSrc, title, link }) => {
             <img
               src={thumbnailSrc}
               alt={title}
-              style={{ width: "347.4px", height: "209.5px" }}
+              style={{ width: "380.4px", height: "209.5px" }}
               className="thumbnail border border-[#8a38f4]"
             />
           </div>
         )}
-        <div className="">
+        <div className="text-container">
           <h4 className="py-4 text-base font-medium lg:text-lg w-80">
             {title}
           </h4>

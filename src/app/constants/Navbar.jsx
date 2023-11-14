@@ -2,7 +2,9 @@
 import { useState } from "react";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+/* import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"; */
+import { RiMenu2Fill } from "react-icons/ri";
+import { TfiClose } from "react-icons/tfi";
 import {
   AiOutlineHome,
   AiOutlineVideoCamera,
@@ -45,13 +47,13 @@ export default function Navbar() {
             <div className="container mx-auto px-2">
               <div className="relative flex h-16 items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                  <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-[#8a34f4] focus:outline-none">
                     <span className="absolute -inset-0.5" />
                     <span className="sr-only"></span>
                     {open ? (
-                      <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                      <TfiClose className="block h-6 w-6" aria-hidden="true" />
                     ) : (
-                      <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                      <RiMenu2Fill className="block h-6 w-6" aria-hidden="true" />
                     )}
                   </Disclosure.Button>
                 </div>
