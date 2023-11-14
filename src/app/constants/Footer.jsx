@@ -1,45 +1,58 @@
-import * as images from '../../assets/index'
+import * as images from "../../assets/index";
 
 const Footer = () => {
   return (
-    <footer>
-    <div className="container flex flex-col items-center justify-between py-8 mx-auto lg:flex-row">
-        <a href="#">
-            <img className="w-auto h-10" src={images.LOGO.src} alt="LOGO" />
-        </a>
-
-        <div className="flex flex-wrap items-center justify-center gap-4 mt-6 lg:gap-6 lg:mt-0">
-            <a href="#" className="text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-[#8a38f4]">
-            Match Highlights
-            </a>
-
-            <a href="#" className="text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-[#8a38f4]">
-            Latest News
-            </a>
-
-            <a href="#" className="text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-[#8a38f4]">
-            Fan Community
-            </a>
-            <a href="#" className="text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-[#8a38f4]">
-            TK Store
-            </a>
-
-            <a href="#" className="text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-[#8a38f4]">
-            About Us
-            </a>
-
-            <a href="#" className="text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-[#8a38f4]">
-                Privacy
-            </a>
+    <>
+      <div className=" bg-linear-pink-invert">
+        <div className="mx-auto container py-8 flex flex-col items-center justify-center">
+          <div>
+            <img src={images.LOGO.src} width={190} />
+          </div>
+          <div className="text-white flex flex-col md:items-center pt-3">
+            <div className="flex md:flex items-center gap-4 mt-5 md:mt-10 text-base">
+              <img
+                src="https://www.designpieces.com/assets/wp-content/uploads/2016/02/google-play-badge.png"
+                className="w-36 h-auto border rounded-lg"
+              />
+              <img
+                src="https://cdn.statically.io/img/lazarillo.app/wp-content/uploads/2022/10/appstore.png?quality=100&f=auto"
+                className="w-36 h-auto"
+              />
+            </div>
+            <div className="my-6 text-base text-center">
+              <ul className="md:flex items-center">
+                <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">
+                  Match Highlights
+                </li>
+                <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">
+                  Latest News
+                </li>
+                <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">
+                  Fan Community
+                </li>
+                <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">
+                  RushScore Store
+                </li>
+                <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">
+                  Terms and Conditions
+                </li>
+                <li className="cursor-pointer pt-4 lg:py-0">Privacy Policy</li>
+              </ul>
+            </div>
+            <div className="text-sm text-center mb-10 ">
+              <p> © 2023 RushScore. All rights reserved</p>
+              <span className="flex pt-4">
+                Designed & Built with{" "}
+                <img src={images.TN.src} className="w-auto h-4 px-2" /> by
+                Moenes Mannai{" "}
+              </span>
+            </div>
+          </div>
+          {/*  <div className="w-9/12  h-0.5 bg-gray-100 rounded-full" /> */}
         </div>
+      </div>
+    </>
+  );
+};
 
-<p className="flex items-center mt-6 text-xs lg:text-sm text-gray-400 lg:mt-0">© Copyright 2023- Made with
-        <img src={images.TN.src} className='w-auto h-4 px-2'/>
-        by Moenes Mannai </p>
-        
-    </div>
-</footer>
-  )
-}
-
-export default Footer
+export default Footer;

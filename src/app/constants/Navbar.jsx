@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-/* import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"; */
 import { RiMenu2Fill } from "react-icons/ri";
 import { TfiClose } from "react-icons/tfi";
 import {
@@ -32,7 +31,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [searchHeight, setSearchHeight] = useState(0); 
+  const [searchHeight, setSearchHeight] = useState(0);
 
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
@@ -53,7 +52,10 @@ export default function Navbar() {
                     {open ? (
                       <TfiClose className="block h-6 w-6" aria-hidden="true" />
                     ) : (
-                      <RiMenu2Fill className="block h-6 w-6" aria-hidden="true" />
+                      <RiMenu2Fill
+                        className="block h-6 w-6"
+                        aria-hidden="true"
+                      />
                     )}
                   </Disclosure.Button>
                 </div>
