@@ -2,7 +2,7 @@
 export const ArticleDetails = (props) => {
   const { element } = props;
 
-  const formattedDate = new Date(element.publishedAt).toLocaleDateString(
+  const formattedDate = new Date(element?.publishedAt).toLocaleDateString(
     undefined,
     {
       day: "numeric",
@@ -15,13 +15,13 @@ export const ArticleDetails = (props) => {
     <>
       <article className="relative select-none border px-8 pt-10 pb-20 text-white hover:border-[#8a38f4] transition-all shadow-md">
         <h2 className="text-lg uppercase font-semibold">
-            <span className="text-[#8a38f4]">{"⬧"}</span> {element.title}</h2>
-        <p className="text-sm text-gray-300">{element.description}</p>
+            <span className="text-[#8a38f4]">{"⬧"}</span> {element?.title}</h2>
+        <p className="text-sm text-gray-300">{element?.description}</p>
         <span className="absolute bottom-4 text-sm font-medium">
           {formattedDate}
         </span>
         <a
-          href={element.url}
+          href={element?.url}
           target="_blank"
           className="absolute bottom-0 right-0 flex h-12 w-12 items-center justify-center bg-[#8a38f4] text-white transition-all hover:w-16"
         >
