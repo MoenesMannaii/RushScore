@@ -15,13 +15,19 @@ export const Articles = () => {
           `https://newsapi.org/v2/everything?q=football&apiKey=${apiKey}`
         );
         const data = await response.json();
-        const limitedNews = data.articles.slice(0, 6);
-
-        setNews(limitedNews);
+    
+        // Check if data.articles is defined
+        if (data.articles) {
+          const limitedNews = data.articles.slice(0, 6);
+          setNews(limitedNews);
+        } else {
+          console.error("Error fetching football news. 'articles' property is undefined.");
+        }
       } catch (error) {
         console.error("Error fetching football news:", error);
       }
     };
+    
 
     fetchFootballNews();
   }, []);
