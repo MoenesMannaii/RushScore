@@ -14,7 +14,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { CiStreamOn } from "react-icons/ci";
 import { TbPremiumRights } from "react-icons/tb";
 import * as images from "../../assets/index";
-import { SearchBar } from "./Searchbar";
+import SearchBar from "./SearchBar";
 
 const navigation = [
   { name: "Home", href: "#", current: true, icon: <AiOutlineHome /> },

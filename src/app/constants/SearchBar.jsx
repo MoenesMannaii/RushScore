@@ -1,5 +1,5 @@
 
-export const SearchBar = ({ isOpen, toggleSearch }) => {
+ const SearchBar = ({ isOpen, toggleSearch }) => {
   return (
     <div className={`transition-all duration-500 ease-in-out ${isOpen ? "sticky top-0" : "absolute top-full"}`}>
       <div className="container mx-auto flex items-center">
@@ -16,3 +16,5 @@ export const SearchBar = ({ isOpen, toggleSearch }) => {
     </div>
   );
 };
+
+export default SearchBar
