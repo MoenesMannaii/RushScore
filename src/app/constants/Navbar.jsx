@@ -14,6 +14,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { CiStreamOn } from "react-icons/ci";
 import { TbPremiumRights } from "react-icons/tb";
 import * as images from "../../assets/index";
+import { SearchBar } from "./Searchbar";
 
 const navigation = [
   { name: "Home", href: "#", current: true, icon: <AiOutlineHome /> },
@@ -31,13 +32,13 @@ function classNames(...classes) {
 
 export default function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [searchHeight, setSearchHeight] = useState(0);
+/*   const [searchHeight, setSearchHeight] = useState(0); */
   const [isSticky, setIsSticky] = useState(false);
 
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
-    setSearchHeight((prevHeight) => (prevHeight === 0 ? 12 : 0));
   };
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -214,20 +215,10 @@ export default function Navbar() {
                 ))}
               </div>
             </Disclosure.Panel>
+            <SearchBar isOpen={isSearchOpen} toggleSearch={toggleSearch} />
           </>
         )}
       </Disclosure>
-      <div className="container mx-auto flex items-center transition duration-700 ease-in-out">
-         {isSearchOpen && (
-  <div className="relative w-full mt-2">
-    <input
-      type="text"
-      className="w-full flex px-4 py-2 tracking-widest focus:outline-none focus:ring-1 focus:ring-[#8a38f4] bg-[#130D25] text-white border border-[#8a38f4] rounded-md"
-      placeholder="Start searching..."
-    />
-  </div>
-)}
-      </div>
     </>
   );
 }
