@@ -9,15 +9,15 @@ const Footer = () => {
             <img src={images.LOGO.src} width={190} alt="Logo" />
           </div>
           <div className="text-white flex flex-col md:items-center pt-3">
-            <div className="flex md:flex items-center gap-4 mt-5 md:mt-10 text-base">
+            <div className="flex md:flex items-center mx-auto gap-2 mt-5 md:mt-10 text-base">
               <img
                 src="https://www.designpieces.com/assets/wp-content/uploads/2016/02/google-play-badge.png"
-                className="w-36 h-auto border rounded-lg"
+                className="w-28 h-auto border rounded-lg"
                 alt="Google Play Badge"
               />
               <img
                 src="https://cdn.statically.io/img/lazarillo.app/wp-content/uploads/2022/10/appstore.png?quality=100&f=auto"
-                className="w-36 h-auto"
+                className="w-28 h-auto"
                 alt="App Store Badge"
               />
             </div>
@@ -43,10 +43,12 @@ const Footer = () => {
             </div>
             <div className="text-sm text-center mb-10 ">
               <p> © 2023 RushScore. All rights reserved</p>
-              <span className="flex pt-4">
+              <span className="flex pt-4 font-cs">
                 Designed & Built with{" "}
-                <img src={images.TN.src} className="w-auto h-4 px-2" alt="TN Logo" /> by
+                <img src={images.TN.src} className="w-auto h-4 px-2" alt="TN Logo" /> by&nbsp;
+                <a href="https://www.linkedin.com/in/moenes-mannai-1ab4a0297/">
                 Moenes Mannai{" "}
+                </a>
               </span>
             </div>
           </div>

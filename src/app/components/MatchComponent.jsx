@@ -147,8 +147,8 @@ function MatchList() {
   return (
     <div>
       <div className='container mx-auto'>
-      <h1 className="bg-[#8a38f4] flex items-center
-       px-2 py-2 text-2xl font-semibold"> <BiFootball />&nbsp;Live Scores</h1>
+      <h2 className="bg-[#8a38f4] flex items-center px-2 py-2 text-2xl font-semibold"><BiFootball />&nbsp;Live Scores</h2>
+
       <MatchComponent matchData={matchData} />
       </div>
     </div>

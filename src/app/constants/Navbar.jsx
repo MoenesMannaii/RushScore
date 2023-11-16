@@ -63,7 +63,7 @@ export default function Navbar() {
             <div className="container mx-auto">
               <div className="relative flex h-16 items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                  <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-[#8a34f4] focus:outline-none">
+                  <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-white  focus:outline-none">
                     <span className="absolute -inset-0.5" />
                     <span className="sr-only"></span>
                     {open ? (
@@ -203,8 +203,8 @@ export default function Navbar() {
                     href={item.href}
                     className={classNames(
                       item.current
-                        ? "bg-gray-900 text-white"
-                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                        ? "bg-[#130D25]  text-white"
+                        : "text-gray-300 hover:bg-[#8a38f4]  hover:text-white",
                       "block rounded-md px-3 py-2 text-base font-medium"
                     )}
                     aria-current={item.current ? "page" : undefined}

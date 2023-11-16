@@ -1,4 +1,4 @@
-
+"use client"
 import { Hero } from "./components/Hero";
 import MatchComponent from "./components/MatchComponent";
 import { Reviews } from "./components/Reviews";
@@ -8,7 +8,8 @@ import { Wins } from "./components/Wins";
 import { Updates } from "./components/Updates";
 import { LiveMatch } from "./components/LiveMatch";
 import { TopVideos } from "./components/TopVideos";
-import { OfTheYear } from "./components/OfTheYear";
+import { ElitePerformance } from "./components/ElitePerformance";
+import { Articles } from "./components/Articles/Articles";
 
 const page = () => {
   return (
@@ -20,7 +21,8 @@ const page = () => {
       <Reviews />
       <Updates />
       <TopVideos />
-      <OfTheYear />
+      <ElitePerformance />
+      <Articles />
       <Partners />
       <Footer />
     </>
