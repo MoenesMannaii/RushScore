@@ -9,7 +9,7 @@ import { Updates } from "./components/Updates";
 import { LiveMatch } from "./components/LiveMatch";
 import { TopVideos } from "./components/TopVideos";
 import { ElitePerformance } from "./components/ElitePerformance";
-import { Articles } from "./components/Articles/Articles";
+import { Articles } from "./components/Articles";
 
 const page = () => {
   return (
@@ -22,7 +22,7 @@ const page = () => {
       <Updates />
       <TopVideos />
       <ElitePerformance />
-      <Articles />
+     <Articles />
       <Partners />
       <Footer />
     </>

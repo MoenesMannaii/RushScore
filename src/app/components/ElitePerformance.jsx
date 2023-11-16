@@ -11,8 +11,8 @@ export const ElitePerformance = () => {
         &nbsp;Elite Performance Showcase
       </h2>
       <div className="w-full grid py-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 p-4 lg:px-0">
-        <div className="bg-white dark:bg-[#0e0e0e] border shadow px-8 py-4 flex items-center">
-          <div className="p-4 bg-[#8a34f4] border">
+        <div className="bg-white dark:bg-[#0e0e0e] border border-[#8a34f4] shadow px-8 py-4 flex items-center">
+          <div className="p-4 bg-[#8a34f4]">
             <GiBabyfootPlayers className="w-8 h-auto" />
           </div>
           <div className="ml-6">
@@ -21,8 +21,8 @@ export const ElitePerformance = () => {
             </h3>
           </div>
         </div>
-        <div className="bg-white dark:bg-[#0e0e0e] border shadow px-8 py-4 flex items-center">
-          <div className="p-4 bg-[#8a34f4] border text-white">
+        <div className="bg-white dark:bg-[#0e0e0e] border border-[#8a34f4] shadow px-8 py-4 flex items-center">
+          <div className="p-4 bg-[#8a34f4] text-white">
             <FaUserTie className="w-8 h-auto" />
           </div>
           <div className="ml-6">
@@ -31,8 +31,8 @@ export const ElitePerformance = () => {
             </h3>
           </div>
         </div>
-        <div className="bg-white dark:bg-[#0e0e0e] border shadow px-8 py-4 flex items-center">
-          <div className="p-4 bg-[#8a34f4] border text-white">
+        <div className="bg-white dark:bg-[#0e0e0e] border border-[#8a34f4] shadow px-8 py-4 flex items-center">
+          <div className="p-4 bg-[#8a34f4] text-white">
             <GiWhistle className="w-8 h-auto" />
           </div>
           <div className="ml-6">
@@ -41,8 +41,8 @@ export const ElitePerformance = () => {
             </h3>
           </div>
         </div>
-        <div className="bg-white dark:bg-[#0e0e0e] border shadow px-8 py-4 flex items-center">
-          <div className="p-4 bg-[#8a34f4] border text-white">
+        <div className="bg-white dark:bg-[#0e0e0e] border border-[#8a34f4] shadow px-8 py-4 flex items-center">
+          <div className="p-4 bg-[#8a34f4] text-white">
             <IoFootball className="w-8 h-auto" />
           </div>
           <div className="ml-6">
