@@ -32,18 +32,16 @@ function classNames(...classes) {
 
 export default function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-/*   const [searchHeight, setSearchHeight] = useState(0); */
+  /*   const [searchHeight, setSearchHeight] = useState(0); */
   const [isSticky, setIsSticky] = useState(false);
 
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
   };
 
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      // Set isSticky to true if the scroll position is greater than a certain threshold
       setIsSticky(scrollPosition > 100);
     };
 
