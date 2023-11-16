@@ -1,5 +1,5 @@
 
-export const SearchBar = ({ isOpen }) => {
+export const SearchBar = ({ isOpen, toggleSearch }) => {
   return (
     <div className={`transition-all duration-500 ease-in-out ${isOpen ? "sticky top-0" : "absolute top-full"}`}>
       <div className="container mx-auto flex items-center">

@@ -32,7 +32,6 @@ function classNames(...classes) {
 
 export default function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  /*   const [searchHeight, setSearchHeight] = useState(0); */
   const [isSticky, setIsSticky] = useState(false);
 
   const toggleSearch = () => {
