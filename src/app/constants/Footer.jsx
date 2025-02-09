@@ -41,16 +41,7 @@ const Footer = () => {
                 <li className="cursor-pointer pt-4 lg:py-0">Privacy Policy</li>
               </ul>
             </div>
-            <div className="text-sm text-center mb-10 ">
-              <p> © 2023 RushScore. All rights reserved</p>
-              <span className="flex pt-4 font-cs">
-                Designed & Built with{" "}
-                <img src={images.TN.src} className="w-auto h-4 px-2" alt="TN Logo" /> by&nbsp;
-                <a href="https://www.linkedin.com/in/moenes-mannai-1ab4a0297/">
-                Moenes Mannai{" "}
-                </a>
-              </span>
-            </div>
+        
           </div>
         </div>
       </div>
