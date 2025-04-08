@@ -1,0 +1,152 @@
+{
+    "response": [
+      {
+        "fixture": {
+          "id": 1,
+          "status": {
+            "short": "FT",
+            "elapsed": 90,
+            "long": "Match Terminé"
+          },
+          "referee": "C. Turpin",
+          "venue": {
+            "name": "Parc des Princes",
+            "city": "Paris"
+          }
+        },
+        "league": {
+          "id": 61,
+          "name": "Ligue 1",
+          "country": "France",
+          "logo": "https://imgs.search.brave.com/8uWXfXYuO1bbY2hzlmTkvEZ9-oBYHilnlq-tQPczbis/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZmlmcGxheS5jb20v/aW1nL3B1YmxpYy9s/aWd1ZS0xLWxvZ28u/cG5n"
+        },
+        "teams": {
+          "home": {
+            "id": 85,
+            "name": "PSG",
+            "logo": "https://imgs.search.brave.com/Zd2SFHdH-uxG8z5arZAJiZ5XLurgKOl1Vuw8fzeR8n4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODBiNTdmY2Q5OTk2/ZTI0YmM0M2M0ZDgu/cG5n"
+          },
+          "away": {
+            "id": 116,
+            "name": "Olympique Marseille",
+            "logo": "https://imgs.search.brave.com/gZQGHzRwVRctzeZavTK7OaxTz0mOJ2ANHNmV8jLR-Vc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODBiNTdmY2Q5OTk2/ZTI0YmM0M2M0ZDIu/cG5n"
+          }
+        },
+        "goals": {
+          "home": 2,
+          "away": 1
+        }
+      },
+      {
+        "fixture": {
+          "id": 2,
+          "status": {
+            "short": "HT",
+            "elapsed": 45,
+            "long": "Mi-temps"
+          },
+          "referee": "A. Taylor",
+          "venue": {
+            "name": "Anfield",
+            "city": "Liverpool"
+          }
+        },
+        "league": {
+          "id": 39,
+          "name": "Premier League",
+          "country": "Angleterre",
+          "logo": "https://imgs.search.brave.com/xK_deY4BEMPfgXCKSCGc9R_BfvP5MkFQPVd-mT0rWUM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YnJhbmRmZXRjaC5p/by9pZDNlaTlVd2h1/L3cvMTc3L2gvMjI0/L3RoZW1lL2Rhcmsv/bG9nby5wbmc_Yz0x/YnhpZDY0TXVwN2Fj/emV3U0FZTVgmdD0x/NzM3MzU2ODU4NTkz"
+        },
+        "teams": {
+          "home": {
+            "id": 40,
+            "name": "Liverpool",
+            "logo": "https://imgs.search.brave.com/kBH9VGXLZSAiwZCrDeJXMNoT_dCTAYAHkgBIQgdvI7o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzU0LzIvbGl2ZXJw/b29sLWYtYy1sb2dv/LXBuZ19zZWVrbG9n/by01NDc2NDcucG5n"
+          },
+          "away": {
+            "id": 50,
+            "name": "Manchester City",
+            "logo": "https://imgs.search.brave.com/UI7rv0vomi_rrfdUtDjhm5vLmajKVfn5bJryNJ8uZvc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbmdp/bWcuY29tL3VwbG9h/ZHMvbWFuY2hlc3Rl/cl91bml0ZWQvbWFu/Y2hlc3Rlcl91bml0/ZWRfUE5HMjYucG5n"
+          }
+        },
+        "goals": {
+          "home": 1,
+          "away": 1
+        }
+      },
+      {
+        "fixture": {
+          "id": 3,
+          "status": {
+            "short": "LIVE",
+            "elapsed": 63,
+            "long": "En Cours"
+          },
+          "referee": "D. Orsato",
+          "venue": {
+            "name": "Allianz Arena",
+            "city": "Munich"
+          }
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Allemagne",
+          "logo": "https://imgs.search.brave.com/dS0TwRwgMJN-X24Ray7UbLut4hfdW3k_mLEXejD85LE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZmlmcGxheS5jb20v/aW1nL3B1YmxpYy9i/dW5kZXNsaWdhLWxv/Z28ucG5n"
+        },
+        "teams": {
+          "home": {
+            "id": 157,
+            "name": "Bayern Munich",
+            "logo": "https://imgs.search.brave.com/lyL-2xkErFyyGvrRWTAyQciPKU9WORz-bwLrp9FrHZY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZWRpZ2l0YWxhZ2Vu/Y3kuY29tLmF1L3dw/LWNvbnRlbnQvdXBs/b2Fkcy9GQy1CYXll/cm4tTXVuY2hlbi1s/b2dvLXBuZy05MDB4/OTAwLnBuZw"
+          },
+          "away": {
+            "id": 173,
+            "name": "Borussia Dortmund",
+            "logo": "https://imgs.search.brave.com/lKLUA2VUqITy1MO3YYA8pNV7hUuOyZS0zYfyBkRR_k0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODRkODY3ODM2N2I2/YTEzZTU0NDc3ZDMu/cG5n"
+          }
+        },
+        "goals": {
+          "home": 3,
+          "away": 2
+        }
+      },
+      {
+        "fixture": {
+          "id": 4,
+          "status": {
+            "short": "NS",
+            "elapsed": null,
+            "long": "Pas Commencé"
+          },
+          "referee": "À Décider",
+          "venue": {
+            "name": "San Siro",
+            "city": "Milan"
+          }
+        },
+        "league": {
+          "id": 135,
+          "name": "Serie A",
+          "country": "Italie",
+          "logo": "https://imgs.search.brave.com/jLzMv2j6P-o64XtwnpcjFekn368cBqxGCvtA3whtOyE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZmlmcGxheS5jb20v/aW1nL3B1YmxpYy9z/ZXJpZS1hLWxvZ28u/cG5n"
+        },
+        "teams": {
+          "home": {
+            "id": 489,
+            "name": "AC Milan",
+            "logo": "https://imgs.search.brave.com/HAA-r6QWkSMgM_Fvgi-AHoylBYv3jwoD5wD-3mfGjeo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODRhYjE1MzMwZDY3/MzZiY2EzZDZlMjQu/cG5n"
+          },
+          "away": {
+            "id": 492,
+            "name": "Juventus",
+            "logo": "https://imgs.search.brave.com/U2_4KFoxD1eD4sQ_eiqkDG1qNHoaGBt0GOV9lLoAsgo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy85/Lzk5L0p1dmVudHVz/XzIwMTdfbG9nb18o/bmVnYXRpdmUpLnBu/Zw"
+          }
+        },
+        "goals": {
+          "home": "-",
+          "away": "-"
+        }
+      }
+    ]
+  }

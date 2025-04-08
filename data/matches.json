@@ -1,0 +1,160 @@
+{
+    "response": [
+      {
+        "fixture": {
+          "id": 867954,
+          "date": "2024-03-15T20:00:00+00:00",
+          "status": {
+            "short": "FT",
+            "elapsed": 90,
+            "long": "Match Finished"
+          },
+          "referee": "M. Oliver",
+          "venue": {
+            "name": "Stamford Bridge",
+            "city": "London"
+          }
+        },
+        "league": {
+          "id": 39,
+          "name": "Premier League",
+          "country": "England",
+          "logo": "https://imgs.search.brave.com/xK_deY4BEMPfgXCKSCGc9R_BfvP5MkFQPVd-mT0rWUM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YnJhbmRmZXRjaC5p/by9pZDNlaTlVd2h1/L3cvMTc3L2gvMjI0/L3RoZW1lL2Rhcmsv/bG9nby5wbmc_Yz0x/YnhpZDY0TXVwN2Fj/emV3U0FZTVgmdD0x/NzM3MzU2ODU4NTkz",
+          "flag": "https://imgs.search.brave.com/xVX002Qu7-SrW8GE6IaVUIi3OuLE3NfVx64AKVxQYxY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy80/LzQyL0ZsYWdfb2Zf/dGhlX1VuaXRlZF9L/aW5nZG9tLnBuZw"
+        },
+        "teams": {
+          "home": {
+            "id": 49,
+            "name": "Chelsea",
+            "logo": "https://imgs.search.brave.com/KtLfpmc3jjuxqbqXeqGvynOZ7Cpa3_ZmZfHPSs2Ljhs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODBiNTdmY2Q5OTk2/ZTI0YmM0M2M0ZTEu/cG5n"
+          },
+          "away": {
+            "id": 40,
+            "name": "Liverpool",
+            "logo": "https://imgs.search.brave.com/kBH9VGXLZSAiwZCrDeJXMNoT_dCTAYAHkgBIQgdvI7o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzU0LzIvbGl2ZXJw/b29sLWYtYy1sb2dv/LXBuZ19zZWVrbG9n/by01NDc2NDcucG5n"
+          }
+        },
+        "goals": {
+          "home": 3,
+          "away": 2
+        }
+      },
+      {
+        "fixture": {
+          "id": 867955,
+          "date": "2024-03-15T19:30:00+00:00",
+          "status": {
+            "short": "HT",
+            "elapsed": 45,
+            "long": "Half Time"
+          },
+          "referee": "A. Taylor",
+          "venue": {
+            "name": "Camp Nou",
+            "city": "Barcelona"
+          }
+        },
+        "league": {
+          "id": 140,
+          "name": "La Liga",
+          "country": "Spain",
+          "logo": "https://imgs.search.brave.com/lMz2T1z0LfWRGLxfkOjzZ3CxqEwmZtk6Z4W7GmRbmIM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/ZG93bmxvYWQub3Jn/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDE4/LzA1L2xhbGlnYS1s/b2dvLnBuZw",
+          "flag": "https://imgs.search.brave.com/pxL5vYHZWaeC3b0jvYsM8tPXzcnk4hslfZMn47nf4x8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZmxhZ2NvbG9yY29k/ZXMuY29tL2RhdGEv/ZmxhZy1vZi1zcGFp/bi5wbmc"
+        },
+        "teams": {
+          "home": {
+            "id": 529,
+            "name": "Barcelona",
+            "logo": "https://imgs.search.brave.com/Xuv7MB9CYb55o_pcWN3B2lsnR3uM7TxUVSx52Kpjq94/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbmdp/bWcuY29tL3VwbG9h/ZHMvZmNiX2xvZ28v/ZmNiX2xvZ29fUE5H/NS5wbmc"
+          },
+          "away": {
+            "id": 541,
+            "name": "Real Madrid",
+            "logo": "https://imgs.search.brave.com/T0n6KsPLL08dPsjbF7OoYnoaNybxHC6lo3wWquaFBDQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/ZGV0aW1lcy5jb20v/dGltZXMvcmVhbC1t/YWRyaWQvbG9nby1y/ZWFsLW1hZHJpZC1l/c2N1ZG8tNDA5Ni5w/bmc"
+          }
+        },
+        "goals": {
+          "home": 1,
+          "away": 1
+        }
+      },
+      {
+        "fixture": {
+          "id": 867956,
+          "date": "2024-03-15T21:00:00+00:00",
+          "status": {
+            "short": "LIVE",
+            "elapsed": 63,
+            "long": "Second Half"
+          },
+          "referee": "C. Pawson",
+          "venue": {
+            "name": "Old Trafford",
+            "city": "Manchester"
+          }
+        },
+        "league": {
+          "id": 39,
+          "name": "Premier League",
+          "country": "England",
+          "logo": "https://imgs.search.brave.com/xK_deY4BEMPfgXCKSCGc9R_BfvP5MkFQPVd-mT0rWUM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YnJhbmRmZXRjaC5p/by9pZDNlaTlVd2h1/L3cvMTc3L2gvMjI0/L3RoZW1lL2Rhcmsv/bG9nby5wbmc_Yz0x/YnhpZDY0TXVwN2Fj/emV3U0FZTVgmdD0x/NzM3MzU2ODU4NTkz",
+          "flag": "https://imgs.search.brave.com/xVX002Qu7-SrW8GE6IaVUIi3OuLE3NfVx64AKVxQYxY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy80/LzQyL0ZsYWdfb2Zf/dGhlX1VuaXRlZF9L/aW5nZG9tLnBuZw"
+        },
+        "teams": {
+          "home": {
+            "id": 33,
+            "name": "Manchester United",
+            "logo": "https://imgs.search.brave.com/UI7rv0vomi_rrfdUtDjhm5vLmajKVfn5bJryNJ8uZvc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbmdp/bWcuY29tL3VwbG9h/ZHMvbWFuY2hlc3Rl/cl91bml0ZWQvbWFu/Y2hlc3Rlcl91bml0/ZWRfUE5HMjYucG5n"
+          },
+          "away": {
+            "id": 50,
+            "name": "Manchester City",
+            "logo": "https://imgs.search.brave.com/yE_NWNwwaddH-48PflixyCF-0xC1pN_PF-Okiq2RoDc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZWRpZ2l0YWxhZ2Vu/Y3kuY29tLmF1L3dw/LWNvbnRlbnQvdXBs/b2Fkcy9NYW5jaGVz/dGVyLUNpdHktRkMt/bG9nby1wbmctYmFk/Z2UtOTAweDkwMC5w/bmc"
+          }
+        },
+        "goals": {
+          "home": 2,
+          "away": 3
+        }
+      },
+      {
+        "fixture": {
+          "id": 867957,
+          "date": "2024-03-16T15:00:00+00:00",
+          "status": {
+            "short": "NS",
+            "elapsed": null,
+            "long": "Not Started"
+          },
+          "referee": "TBC",
+          "venue": {
+            "name": "San Siro",
+            "city": "Milan"
+          }
+        },
+        "league": {
+          "id": 135,
+          "name": "Serie A",
+          "country": "Italy",
+          "logo": "https://imgs.search.brave.com/jLzMv2j6P-o64XtwnpcjFekn368cBqxGCvtA3whtOyE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZmlmcGxheS5jb20v/aW1nL3B1YmxpYy9z/ZXJpZS1hLWxvZ28u/cG5n",
+          "flag": "https://imgs.search.brave.com/KxUB5D_Ma0h-cCUYksjWnwryrK0TWyk5zWgZlvJLuus/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZmxhZ2NvbG9yY29k/ZXMuY29tL2RhdGEv/ZmxhZy1vZi1pdGFs/eS5wbmc"
+        },
+        "teams": {
+          "home": {
+            "id": 489,
+            "name": "AC Milan",
+            "logo": "https://imgs.search.brave.com/HAA-r6QWkSMgM_Fvgi-AHoylBYv3jwoD5wD-3mfGjeo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODRhYjE1MzMwZDY3/MzZiY2EzZDZlMjQu/cG5n"
+          },
+          "away": {
+            "id": 492,
+            "name": "Juventus",
+            "logo": "https://imgs.search.brave.com/U2_4KFoxD1eD4sQ_eiqkDG1qNHoaGBt0GOV9lLoAsgo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy85/Lzk5L0p1dmVudHVz/XzIwMTdfbG9nb18o/bmVnYXRpdmUpLnBu/Zw"
+          }
+        },
+        "goals": {
+          "home": null,
+          "away": null
+        }
+      }
+    ]
+  }
