@@ -95,10 +95,11 @@ const MatchComponent: React.FC<{ match: Match }> = ({ match }) => {
             </span>
           </div>
           <div className={`text-sm ${
-            match.fixture.status.short === 'LIVE' ? 'text-green-500' : 'text-gray-400'
-          }`}>
-            {match.fixture.status.elapsed}' {match.fixture.status.short === 'HT' && '(Half Time)'}
-          </div>
+  match.fixture.status.short === 'LIVE' ? 'text-green-500' : 'text-gray-400'
+}`}>
+  {`${match.fixture.status.elapsed}'`} {match.fixture.status.short === 'HT' && '(Half Time)'}
+</div>
+
         </div>
 
         <div className="flex items-center justify-between">
