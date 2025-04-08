@@ -1,5 +1,5 @@
 "use client";
-
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { BiFootball } from 'react-icons/bi';
 import { GiWhistle } from 'react-icons/gi';
@@ -83,10 +83,12 @@ const MatchComponent: React.FC<{ match: Match }> = ({ match }) => {
       <div className="px-6 py-4">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center">
-            <img
+            <Image
               src={match.league.logo}
               alt={match.league.name}
               className="w-auto h-8 mr-2"
+              width={100}
+              height={100}
             />
             <span className="text-sm font-semibold">
               {match.league.name}
@@ -101,10 +103,12 @@ const MatchComponent: React.FC<{ match: Match }> = ({ match }) => {
 
         <div className="flex items-center justify-between">
           <div className="text-center w-1/3">
-            <img
+            <Image
               src={match.teams.home.logo}
               alt={match.teams.home.name}
               className="w-auto h-16 mx-auto mb-2"
+              width={100}
+              height={100}
             />
             <span className="text-sm font-semibold">
               {match.teams.home.name}
@@ -124,10 +128,12 @@ const MatchComponent: React.FC<{ match: Match }> = ({ match }) => {
           </div>
 
           <div className="text-center w-1/3">
-            <img
+            <Image
               src={match.teams.away.logo}
               alt={match.teams.away.name}
               className="w-16 h-16 mx-auto mb-2"
+              width={100}
+              height={100}
             />
             <span className="text-sm font-semibold">
               {match.teams.away.name}
@@ -182,10 +188,12 @@ export default function LiveScores() {
         {Object.entries(groupedMatches).map(([leagueKey, leagueData]) => (
           <div key={leagueKey} className="mb-8">
             <div className="flex items-center mb-4 p-2 bg-[#130D25] rounded-lg">
-              <img
+              <Image
                 src={leagueData.league.logo}
                 alt={leagueData.league.name}
                 className="w-auto h-8 mr-2"
+                width={100}
+              height={100}
               />
               <h2 className="text-xl font-semibold text-white">
                 {leagueData.league.name}
