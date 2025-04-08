@@ -48,11 +48,11 @@ const Wins = () => {
               <ul className="flex flex-col gap-y-2.5">
                 <li className="flex space-x-3 text-white">
                   <GiBabyfootPlayers className="w-6 h-6" />
-                  <span className="paragraph-l font-bold">Cristiano Ronaldo '2 Goals'</span>
+                  <span className="paragraph-l font-bold">Cristiano Ronaldo &apos;2 Goals&apos; Goals'</span>
                 </li>
                 <li className="flex space-x-3 text-white">
                   <GiBabyfootPlayers className="w-6 h-6" />
-                  <span className="paragraph-l font-bold">Anderson Talisca '2 Goals'</span>
+                  <span className="paragraph-l font-bold">Anderson Talisca &apos;2 Goals&apos; Goals'</span>
                 </li>
               </ul>
             </div>
