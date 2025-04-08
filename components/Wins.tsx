@@ -6,10 +6,10 @@ const Wins = () => {
   return (
     <div className="flex flex-col py-4 px-2 lg:px-12">
       <div className="container mx-auto flex flex-col lg:flex-row items-center gap-6">
-      <div className="lg:w-1/2">
+        <div className="lg:w-1/2">
           <Image
-            src={images.WORLDCUP.src}
-            alt="WorldCup Image"
+            src={images.WORLDCUP?.src || '/fallback-image.jpg'}
+            alt="Image of the World Cup match between Argentina and France"
             width={500}
             height={300}
           />
@@ -20,22 +20,22 @@ const Wins = () => {
             </div>
             <div className="flex justify-between pt-8">
               <ul className="flex flex-col gap-y-2.5">
-              <li className="flex space-x-3 text-white">
-  <GiBabyfootPlayers className="w-6 h-6" />
-  <span className="paragraph-l font-bold">Lionel Messi &apos;2 Goals&apos;</span>
-</li>
-<li className="flex space-x-3 text-white">
-  <GiBabyfootPlayers className="w-6 h-6" />
-  <span className="paragraph-l font-bold">Angel Maria &apos;1 Goal&apos;</span>
-</li>
+                <li className="flex space-x-3 text-white">
+                  <GiBabyfootPlayers className="w-6 h-6" />
+                  <span className="paragraph-l font-bold">Lionel Messi &apos;2 Goals&apos;</span>
+                </li>
+                <li className="flex space-x-3 text-white">
+                  <GiBabyfootPlayers className="w-6 h-6" />
+                  <span className="paragraph-l font-bold">Angel Maria &apos;1 Goal&apos;</span>
+                </li>
               </ul>
             </div>
           </div>
         </div>
         <div className="lg:w-1/2 mt-6 lg:mt-0">
           <Image
-            src={images.ALNASR.src}
-            alt="ALNASSR Image"
+            src={images.ALNASR?.src || '/fallback-image.jpg'}
+            alt="Image of Al Nassr vs Al Ahli Saudi match"
             width={500}
             height={300}
           />
@@ -48,11 +48,11 @@ const Wins = () => {
               <ul className="flex flex-col gap-y-2.5">
                 <li className="flex space-x-3 text-white">
                   <GiBabyfootPlayers className="w-6 h-6" />
-                  <span className="paragraph-l font-bold">Cristiano Ronaldo &apos;2 Goals&apos; Goals'</span>
+                  <span className="paragraph-l font-bold">Cristiano Ronaldo &apos;2 Goals&apos;</span>
                 </li>
                 <li className="flex space-x-3 text-white">
                   <GiBabyfootPlayers className="w-6 h-6" />
-                  <span className="paragraph-l font-bold">Anderson Talisca &apos;2 Goals&apos; Goals'</span>
+                  <span className="paragraph-l font-bold">Anderson Talisca &apos;2 Goals&apos;</span>
                 </li>
               </ul>
             </div>
