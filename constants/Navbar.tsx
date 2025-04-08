@@ -66,7 +66,7 @@ export default function Navbar() {
     : "";
 
   return (
-    <Disclosure as="nav" className={`bg-[#130D25] ${navbarClass}`}>
+    <Disclosure as="nav" className={`bg-[#130D25] px-2 ${navbarClass}`}>
       {({ open }) => (
         <>
           <div className="container mx-auto">

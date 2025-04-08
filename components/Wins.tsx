@@ -1,18 +1,20 @@
 import Image from 'next/image';
-import * as images from './../assets/index';
 import { GiBabyfootPlayers } from 'react-icons/gi';
 
 const Wins = () => {
   return (
     <div className="flex flex-col py-4 px-2 lg:px-12">
       <div className="container mx-auto flex flex-col lg:flex-row items-center gap-6">
+        {/* First Image Section */}
         <div className="lg:w-1/2">
-          <Image
-            src={images.WORLDCUP?.src || '/fallback-image.jpg'}
-            alt="Image of the World Cup match between Argentina and France"
-            width={500}
-            height={300}
-          />
+          <div className="relative w-full" style={{ height: '500px' }}>
+            <Image
+              src="https://imgs.search.brave.com/r5wMJ_9z5heUObSc6WJlJmai9ZrTbIN8oAXFufmPwL0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMuc3RhbmRhcmQu/Y28udWsvMjAyMi8x/Mi8xOS8wNi8xNDUw/MTI0NzE0LmpwZz9j/cm9wPTg6NSxzbWFy/dCZxdWFsaXR5PTc1/JmF1dG89d2VicCZ3/aWR0aD05NjA"
+              alt="Image of the World Cup match between Argentina and France"
+              layout="fill"
+              objectFit="cover" // Ensures the image covers the container without distortion
+            />
+          </div>
           <div className="px-9 pt-10 pb-14 bg-[#251d43]">
             <div className="text-white space-y-4">
               <h3 className="text-xl uppercase font-bold lead-xl bold">Argentina vs France</h3>
@@ -32,13 +34,17 @@ const Wins = () => {
             </div>
           </div>
         </div>
+
+        {/* Second Image Section */}
         <div className="lg:w-1/2 mt-6 lg:mt-0">
-          <Image
-            src={images.ALNASR?.src || '/fallback-image.jpg'}
-            alt="Image of Al Nassr vs Al Ahli Saudi match"
-            width={500}
-            height={300}
-          />
+          <div className="relative w-full" style={{ height: '500px' }}>
+            <Image
+              src="https://imgs.search.brave.com/0X_Q0TsUm0rqeyxyTfgAf2iZD4nMTlCVX9yVzAuDqrI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuZ29hbC5jb20v/aW1hZ2VzL3YzL2Js/dDExNGNmZjM2NzVh/NTJlMjQvUm9uYWxk/byUyMCYlMjBBbC1O/YXNzcidzJTIwbmln/aHRtYXJlLmpwZz9h/dXRvPXdlYnAmZm9y/bWF0PXBqcGcmd2lk/dGg9Mzg0MCZxdWFs/aXR5PTYw"
+              alt="Image of Al Nassr vs Al Ahli Saudi match"
+              layout="fill"
+              objectFit="cover" // Ensures the image covers the container without distortion
+            />
+          </div>
           <div className="px-9 pt-10 pb-14 bg-[#251d43]">
             <div className="text-white space-y-4">
               <h3 className="text-xl uppercase font-bold lead-xl bold">Al Nasr vs Al Ahli Saudi</h3>
