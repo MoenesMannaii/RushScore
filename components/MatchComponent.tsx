@@ -168,9 +168,10 @@ const MatchComponent = ({ matchData }: MatchComponentProps) => {
                 <span>{match.goals.away}</span>
               </div>
               <div className="match-time-lapsed text-lg font-semibold mt-2">
-                {match.fixture.status.elapsed}'{" "}
-                {match.fixture.status.short === "HT" && "(Mi-temps)"}
-              </div>
+  {`${match.fixture.status.elapsed}'`}{" "}
+  {match.fixture.status.short === "HT" && "(Mi-temps)"}
+</div>
+
               <div className="match-referee text-[12px] font-light flex items-center justify-center mt-1">
                 <GiWhistle className="text-lg" />
                 :&nbsp;
