@@ -40,7 +40,7 @@ export const Reviews = () => {
             Their Friendly Rivalry
           </h2>
           <p className="leading-relaxed text-justify mb-8 text-gray-400">
-            In a recent encounter that echoed the camaraderie of football's rich
+            In a recent encounter that echoed the camaraderie of football&apos;s rich
             history, Real Madrid and FC Barcelona engaged in a friendly yet
             fiercely contested match. The stadium buzzed with excitement as fans
             from both sides filled the stands, creating an atmosphere of unity
