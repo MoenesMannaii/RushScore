@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0c071a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Poppins", sans-serif, Arial, Helvetica!important;
+}
+
+
+
+#hovering:hover a {
+background-color: white;
+color: black;
+}
+
+
+
+.fixed-navbar {
+  transition:0.7s ease;
+  background-color: #191134;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px dashed var(--purple);
+}
+
+
+.match {
+  background-color: var(--color-bg-primary);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 0 0 2px 0 rgba(48, 48, 48, 0.1), 0 4px 4px 0 rgba(48, 48, 48, 0.1);
+}
+
+.match-header {
+  display: flex;
+  padding: 16px;
+  border-bottom: 2px solid rgba(48, 48, 48, 0.1);
+}
+
+.match-status {
+  background-color: var(--color-bg-alert);
+  color: var(--color-text-alert);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+.match-status:before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: currentcolor;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.match-tournament {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+.match-tournament img {
+  width: 25px;
+  margin-right: 12px;
+}
+
+.match-actions {
+  display: flex;
+  margin-left: auto;
+}
+
+.btn-icon {
+  border: none;
+  background-color: transparent;
+  color: var(--color-text-icon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.match-content {
+  display: flex;
+  position: relative;
+}
+
+.column {
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% / 3);
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-bg-primary);
+  box-shadow: 0 4px 4px 0 rgba(48, 48, 48, 0.15),
+    0 0 0 15px var(--color-bg-secondary);
+}
+.team-logo img {
+  width: auto;
+}
+
+.team-name {
+  text-align: center;
+  margin-top: 24px;
+  font-weight: 600;
+}
+
+.match-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.match-date,
+.match-referee {
+  color: var(--color-text-secondary);
+}
+.match-date strong,
+.match-referee strong {
+  color: var --color-text-primary;
+}
+
+.match-score {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.match-score-number {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1;
+}
+.match-score-number--leading {
+  color: var(--color-theme-primary);
+}
+
+.match-score-divider {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  color: var --color-text-icon;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.match-time-lapsed {
+  color: #df9443;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.match-referee {
+  margin-top: 12px;
+}
+
+.match-bet-options {
+  display: flex;
+  margin-top: 8px;
+  padding-bottom: 12px;
+}
+
+.match-bet-option {
+  margin-left: 4px;
+  margin-right: 4px;
+  border: 1px solid var(--color-text-icon);
+  background-color: #f9f9f9;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 8px;
+}
+
+
+/* LIVE Matches */
+
+.contents.widget-content {
+  padding: 5px !important;
+}
+
+.contents.widget-content {
+  padding: 15px;
+}
+
+.live-match {
+  display: block;
+  height: 94px;
+  position: relative;
+  margin: 0px auto;
+
+}
+
+.fullink {
+  display: block;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+.live-match-teams {
+  margin: 0 13px;
+}
+
+.live-match img {
+  height: 70px;
+  padding: 4px;
+  position: absolute;
+  width: 70px;
+
+  transition: box-shadow 0.3s;
+}
+
+.teams {
+  position: relative;
+  line-height: 48px;
+}
+
+.teams span {
+  float: right;
+
+  text-align: center;
+
+  width: 100%;
+
+  z-index: 2;
+}
+
+.team_one {
+  float: right;
+  width: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.team_two {
+  float: left;
+  width: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.teams {
+  line-height: 20px;
+}
+
+.live-match-teams {
+  margin: 0 5px;
+}
+
+
+.live-match {
+  height: 7rem;
+}
+
+.details_match {
+  padding: 0 25px;
+}
+
+.live-match img {
+  position: relative;
+  display: block;
+  margin: 5px auto;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+/* TOP VIDEOS STYLES */
+.text-container {
+  max-width: 100%;
+  
+}
+
+.slick-slider .slick-dots li button:before {
+  color:var(--white);
+}
+.slick-dots li.slick-active button:before {
+  color: var(--purple)!important;
+}
+.slick-dots li button:before {
+  opacity: 0.6!important;
+}
+.slick-dots {
+  position: relative!important;
+  bottom: 15px!important;
+}
+
+
+
+
+
+
+/* From Uiverse.io by TCdesign-dev */ 
+#button1 {
+  padding-left: 33px;
+  padding-right: 33px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: #fff;
+  background: #8a38f4;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+
+ #button2 {
+  padding-left: 33px;
+  padding-right: 33px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: #fff;
+  background: transparent;
+  font-weight: 700;
+  border: 1px solid #231b41 ;
+  border-radius: 5px;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.4s;
+
+ }
+ 
+ #button1:hover {
+  box-shadow: 7px 5px 56px -14px #8124fb;
+ }
+ 
+ #button1:active {
+  transform: scale(0.97);
+  box-shadow: 7px 5px 56px -10px #8124fb;
+ }
+
+
+
+/*  Videos Page CSS */
+
+/* VideoPage style classes */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.video-card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #191134;
+}
+
+.video-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+
+.video-title {
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
