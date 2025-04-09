@@ -242,7 +242,7 @@ export default function Navbar() {
           </Disclosure.Panel>
 
           {/* Search Bar */}
-          <SearchBar isOpen={isSearchOpen} toggleSearch={toggleSearch} />
+          <SearchBar isOpen={isSearchOpen} toggleSearch={toggleSearch} data={[]} />
         </>
       )}
     </Disclosure>
