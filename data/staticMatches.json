@@ -6,7 +6,7 @@
           "status": {
             "short": "FT",
             "elapsed": 90,
-            "long": "Match Terminé"
+            "long": "Full Time"
           },
           "referee": "C. Turpin",
           "venue": {
@@ -43,7 +43,7 @@
           "status": {
             "short": "HT",
             "elapsed": 45,
-            "long": "Mi-temps"
+            "long": "Half Time"
           },
           "referee": "A. Taylor",
           "venue": {
@@ -117,7 +117,7 @@
           "status": {
             "short": "NS",
             "elapsed": null,
-            "long": "Pas Commencé"
+            "long": "Starting Soon"
           },
           "referee": "À Décider",
           "venue": {
@@ -154,7 +154,7 @@
           "status": {
             "short": "NS",
             "elapsed": null,
-            "long": "Pas Commencé"
+            "long": "Starting Soon"
           },
           "referee": "À Décider",
           "venue": {

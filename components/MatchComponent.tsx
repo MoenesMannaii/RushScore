@@ -23,15 +23,14 @@ interface MatchFixture {
   referee: string;
 }
 
+interface Team {
+  name: string;
+  logo: string;
+}
+
 interface MatchTeams {
-  home: {
-    name: string;
-    logo: string;
-  };
-  away: {
-    name: string;
-    logo: string;
-  };
+  home: Team;
+  away: Team;
 }
 
 interface MatchData {
@@ -44,166 +43,128 @@ interface MatchData {
   goals: MatchGoals;
 }
 
-const generateDynamicDates = (): MatchData[] => {
-  const now = new Date();
-  return staticMatches.response.map((match, index) => {
-    const newDate = new Date(now);
-    const hourVariation = index % 2 === 0 ? 14 : 20;
-    const dayOffset = Math.floor(index / 2);
-
-    newDate.setDate(now.getDate() + dayOffset - 1);
-    newDate.setHours(hourVariation, 0, 0, 0);
-
-    const status = calculateMatchStatus(newDate);
-
-    return {
-      ...match,
-      fixture: {
-        ...match.fixture,
-        date: newDate.toISOString(),
-        status: status,
-        elapsed: status.short === "FT" ? 90 : status.elapsed,
-      },
-      goals: generateRealisticScore(status.short),
-    };
-  });
-};
-
-const calculateMatchStatus = (matchDate: Date): MatchStatus => {
-  const now = new Date();
-  const timeDiff = now.getTime() - matchDate.getTime();
-  const minutesElapsed = Math.floor(timeDiff / (1000 * 60));
-
-  if (minutesElapsed > 120) {
-    return { short: "FT", long: "Finished", elapsed: 90 };
-  }
-  if (minutesElapsed > 45) {
-    return { short: "LIVE", long: "Started", elapsed: minutesElapsed };
-  }
-  if (minutesElapsed > 0) {
-    return { short: "LIVE", long: "Started", elapsed: minutesElapsed };
-  }
-  return { short: "NS", long: "Starting Soon", elapsed: null };
-};
-
-const generateRealisticScore = (status: string): MatchGoals => {
-  if (status === "NS") return { home: null, away: null };
-  if (status === "FT") {
-    return {
-      home: Math.floor(Math.random() * 4),
-      away: Math.floor(Math.random() * 3),
-    };
-  }
-  return {
-    home: Math.floor(Math.random() * 3),
-    away: Math.floor(Math.random() * 2),
-  };
-};
-
 interface MatchComponentProps {
   matchData: MatchData[];
 }
 
 const MatchComponent = ({ matchData }: MatchComponentProps) => {
   return (
-    <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:flex gap-4 p-2 lg:p-0">
-      {matchData.slice(0, 4).map((match, index) => (
-        <div
-          key={index}
-          className="match mt-4 border-[#8A38F4] border-[1px] rounded-lg"
-        >
-          <div className="match-header flex justify-between p-2">
-            <div className="match-tournament flex items-center">
-              <img
-                src={match.league.logo}
-                alt="Tournament Logo"
-                className="w-8 h-8 mr-2"
-                loading="lazy"
-                width={32}
-                height={32}
-              />
-              <span className="text-xs font-bold">{match.league.name}</span>
+    <div className="container mx-auto px-4 py-4 lg:px-0">
+      <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {matchData.slice(0, 4).map((match, index) => (
+          <div
+            key={index}
+            className="shadow-md rounded-2xl overflow-hidden border border-purple-500 transition hover:shadow-lg"
+          >
+            {/* Header */}
+            <div className="flex justify-between items-center px-4 py-3 bg-[#191134] border-b border-purple-500">
+              <div className="flex items-center">
+                <img
+                  src={match.league.logo}
+                  alt={`${match.league.name} Logo`}
+                  className="w-auto h-8 mr-2"
+                  loading="lazy"
+                />
+                <span className="text-xs font-medium text-white">
+                  {match.league.name}
+                </span>
+              </div>
+              <div
+                className={`text-xs font-medium ${
+                  match.fixture.status.short === "LIVE"
+                    ? "text-green-600"
+                    : "text-gray-400"
+                }`}
+              >
+                {match.fixture.status.long}
+              </div>
             </div>
-            <div
-              className={`match-status ${
-                match.fixture.status.short === "LIVE"
-                  ? "text-green-600"
-                  : "text-gray-500"
-              }`}
-            >
-              {match.fixture.status.long}
-            </div>
-          </div>
-          <div className="match-content flex mx-auto flex-row p-2">
-            <div className="team team--home md:w-1/2">
-              <div className="team-logo">
+
+            {/* Main Content */}
+            <div className="flex flex-col md:flex-row items-center justify-between px-4 py-5 gap-4">
+              {/* Home Team */}
+              <div className="flex flex-col items-center md:w-1/3">
                 <img
                   src={match.teams.home.logo}
-                  alt="Home Team Logo"
-                  className="w-auto h-16 mx-auto"
+                  alt={`${match.teams.home.name} Logo`}
+                  className="w-14 h-14 mb-2"
                   loading="lazy"
                 />
+                <span className="text-sm font-medium text-center text-white">
+                  {match.teams.home.name}
+                </span>
               </div>
-              <h2 className="team-name text-sm font-semibold text-center">
-                {match.teams.home.name}
-              </h2>
-            </div>
-            <div className="match-details md:w-1/2">
-              <div className="match-date mb-2 text-sm">
-                {new Date(match.fixture.date).toLocaleDateString("en-EN", {
-                  day: "numeric",
-                  month: "short",
-                })}{" "}
-                at{" "}
-                <strong className="text-green-600">
-                  {new Date(match.fixture.date).toLocaleTimeString("en-EN", {
-                    hour: "2-digit",
-                    minute: "2-digit",
-                  })}
-                </strong>
-              </div>
-              <div className="match-score text-4xl font-semibold">
-                <span className="leading-10">{match.goals.home}</span>
-                <span className="match-score-divider mx-2">:</span>
-                <span>{match.goals.away}</span>
-              </div>
-              <div className="match-time-lapsed text-lg font-semibold mt-2">
-  {`${match.fixture.status.elapsed}'`}{" "}
-  {match.fixture.status.short === "HT" && "(Mi-temps)"}
-</div>
 
-              <div className="match-referee text-[12px] font-light flex items-center justify-center mt-1">
-                <GiWhistle className="text-lg" />
-                :&nbsp;
-                <strong>&nbsp;{match.fixture.referee || "Moenes"}</strong>
+              {/* Match Details */}
+              <div className="flex flex-col items-center md:w-1/3 text-center">
+                <div className="text-xs text-gray-500 mb-2">
+                  {(() => {
+                    const date = new Date(match.fixture.date || "");
+                    return isNaN(date.getTime()) ? (
+                      "Date not available"
+                    ) : (
+                      <>
+                        {date.toLocaleDateString("en-EN", {
+                          day: "numeric",
+                          month: "short",
+                        })}{" "}
+                       
+                      </>
+                    );
+                  })()}
+                </div>
+
+                <div className="text-3xl font-bold mb-1 text-white">
+                  {match.fixture.status.short === "NS"
+                    ? "0 : 0"
+                    : `${match.goals.home ?? 0} : ${match.goals.away ?? 0}`}
+                </div>
+
+                <div className="text-sm text-green-600 font-medium mb-1">
+                  {match.fixture.status.short === "FT" && "90'"}
+                  {match.fixture.status.short === "HT" && "45' (HT)"}
+                  {match.fixture.status.short === "LIVE" &&
+                    `${match.fixture.status.elapsed}'`}
+                  {match.fixture.status.short === "NS" && (
+                    <span className="text-gray-400">{" - "}</span>
+                  )}
+                </div>
+
+                <div className="text-[10px] text-gray-500 flex items-center justify-center gap-1">
+                  <GiWhistle className="text-base" />
+                  :&nbsp;
+                  <strong>{match.fixture.referee || "Referee"}</strong>
+                </div>
               </div>
-              <div className="match-bet-options flex mt-2 justify-center">
-                {["1.90", "4.00", "3.10"].map((option, index) => (
-                  <button
-                    key={index}
-                    className="match-bet-option text-black rounded-md py-1 px-4 mr-2 bg-gray-100 hover:bg-gray-200 transition-colors"
-                  >
-                    {option}
-                  </button>
-                ))}
-              </div>
-            </div>
-            <div className="team team--away md:w-1/2">
-              <div className="team-logo">
+
+              {/* Away Team */}
+              <div className="flex flex-col items-center md:w-1/3">
                 <img
                   src={match.teams.away.logo}
-                  alt="Away Team Logo"
-                  className="w-16 h-16 mx-auto"
+                  alt={`${match.teams.away.name} Logo`}
+                  className="w-14 h-14 mb-2"
                   loading="lazy"
                 />
+                <span className="text-sm font-medium text-center text-white">
+                  {match.teams.away.name}
+                </span>
               </div>
-              <h2 className="team-name text-sm font-semibold text-center">
-                {match.teams.away.name}
-              </h2>
+            </div>
+
+            {/* Betting Options */}
+            <div className="flex justify-center gap-2 p-4 border-t border-purple-500">
+              {["1.90", "4.00", "3.10"].map((option, idx) => (
+                <button
+                  key={idx}
+                  className="bg-[#191134] text-sm font-semibold text-white py-1.5 px-4 rounded-md transition duration-200"
+                >
+                  {option}
+                </button>
+              ))}
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
@@ -213,31 +174,56 @@ const MatchList = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      const dynamicMatches = generateDynamicDates();
-      setMatchData(dynamicMatches);
-      setLoading(false);
-    }, 1000);
+    const formattedMatches: MatchData[] = (staticMatches.response as unknown as MatchData[]).map((match) => {
 
-    return () => clearTimeout(timer);
+
+      const validDate =
+        match.fixture.date && !isNaN(new Date(match.fixture.date).getTime())
+          ? match.fixture.date
+          : new Date().toISOString();
+
+      return {
+        ...match,
+        goals: {
+          home:
+            typeof match.goals.home === "string" && match.goals.home === "-"
+              ? null
+              : Number(match.goals.home),
+          away:
+            typeof match.goals.away === "string" && match.goals.away === "-"
+              ? null
+              : Number(match.goals.away),
+        },
+        fixture: {
+          ...match.fixture,
+          date: validDate,
+          status: {
+            ...match.fixture.status,
+            elapsed: match.fixture.status.elapsed ?? null,
+          },
+        },
+      };
+    });
+
+    setMatchData(formattedMatches);
+    setLoading(false);
   }, []);
 
-  if (loading)
+  if (loading) {
     return (
       <div className="container mx-auto text-center py-8">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#8A38F4] mx-auto"></div>
       </div>
     );
+  }
 
   return (
-    <div>
-      <div className="container mx-auto">
-        <h2 className="bg-[#8A38F4] flex items-center px-2 py-2 text-2xl font-semibold">
-          <BiFootball />
-          &nbsp;Scores en direct
-        </h2>
-        <MatchComponent matchData={matchData} />
-      </div>
+    <div className="container mx-auto">
+      <h2 className="bg-[#8A38F4] text-white flex items-center px-4 py-3 text-2xl font-semibold rounded-t-lg">
+        <BiFootball className="mr-2" />
+        Scores en direct
+      </h2>
+      <MatchComponent matchData={matchData} />
     </div>
   );
 };

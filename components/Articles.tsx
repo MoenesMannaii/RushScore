@@ -82,7 +82,7 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
       <a
         href="#"
         target="_blank"
-        className="absolute bottom-0 right-0 flex h-12 w-12 items-center justify-center bg-[#8A38F4] text-white transition-all hover:w-16"
+        className="absolute bottom-0 right-0 flex h-12 w-12 items-center justify-center bg-[#8A38F4]  text-white transition-all hover:w-16"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

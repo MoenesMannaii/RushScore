@@ -47,7 +47,7 @@ const newsItems: NewsItemData[] = [
     title: 'EURO 2024: THE DECISIVE GAMES FROM THE FINAL ROUND OF QUALIFYING',
   },
   {
-    image: 'https://e0.365dm.com/24/07/768x432/skysports-maresca-leicester_6596508.jpg?20240702080319',
+    image: 'https://imgs.search.brave.com/8n7EZS0gLg_6S9NfAhS0Pr7QdWT75vHTVFabR6beJDI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTU3/NzE4MDI5L3Bob3Rv/L3N0YW1mb3JkLWJy/aWRnZS5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9RFZPdHBt/VDB6TUUwSG5LSFhm/a1daT3pWMlEwXzhF/NU1qUU5KQlNUbmtQ/ST0',
     time: '32 min ago',
     title: 'Chelsea transfer news, rumours and gossip: Live updates and latest on deals, signings, loans and contracts',
   },

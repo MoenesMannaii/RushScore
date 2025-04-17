@@ -22,7 +22,7 @@ export const Partners = () => {
       </h2>
 
       <div className="max-w-screen-xl mx-auto mt-20">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
+        <div className="grid grid-cols-3 gap-8 md:grid-cols-6 lg:grid-cols-5 px-4 lg:px-0">
           {partnerLogos.map((partner, index) => (
             <div
               key={index}

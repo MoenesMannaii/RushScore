@@ -43,7 +43,7 @@ color: black;
   top: 0;
   width: 100%;
   z-index: 1000;
-  border-bottom: 1px dashed var(--purple);
+  border-bottom: 2px dashed #8A39F5;
 }
 
 

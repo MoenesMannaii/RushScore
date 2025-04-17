@@ -1,6 +1,5 @@
-// Navbar.jsx
-"use client";
 
+"use client";
 import { useState, useEffect, Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { RiMenu2Fill } from "react-icons/ri";
@@ -12,8 +11,6 @@ import {
 } from "react-icons/ai";
 import { BiFootball, BiNews } from "react-icons/bi";
 import { BiSearch } from "react-icons/bi";
-import { CiStreamOn } from "react-icons/ci";
-import { TbPremiumRights } from "react-icons/tb";
 import * as images from "./../assets/index";
 import { SearchBar } from "./SearchBar";
 
@@ -32,9 +29,8 @@ const navigation = [
     current: false,
     icon: <AiOutlineVideoCamera />,
   },
-  { name: "News", href: "/", current: false, icon: <BiNews /> },
-  { name: "Premium", href: "/", current: false, icon: <TbPremiumRights /> },
-  { name: "Live", href: "/", current: false, icon: <CiStreamOn /> },
+  { name: "News", href: "/", current: false, icon: <BiNews /> }
+
 ];
 
 function classNames(...classes: string[]) {
@@ -62,7 +58,7 @@ export default function Navbar() {
   }, []);
 
   const navbarClass = isSticky
-    ? "fixed-navbar fixed top-0 left-0 w-full z-50"
+    ? "fixed-navbar fixed top-0 z-50 max-w-7xl mx-auto "
     : "";
 
   return (
@@ -89,7 +85,7 @@ export default function Navbar() {
                 <img
                   className="h-10 w-auto"
                   src={images.LOGO.src}
-                  alt="Your Company"
+                  alt="Rushscore Logo" 
                 />
               </div>
 
@@ -111,7 +107,7 @@ export default function Navbar() {
                   <img
                     className="h-10 w-auto"
                     src={images.LOGO.src}
-                    alt="Your Company"
+                    alt="Rushscore Logo"
                   />
                 </div>
                 <div className="hidden sm:ml-20 sm:block">
