@@ -2,7 +2,6 @@ import { BiFootball } from "react-icons/bi";
 import { GiWhistle, GiBabyfootPlayers } from "react-icons/gi";
 import { FaUserTie } from "react-icons/fa6";
 import { IoFootball } from "react-icons/io5";
-import clsx from "clsx";
 
 interface CardProps {
   icon: any;
