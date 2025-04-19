@@ -4,7 +4,7 @@ import { FaUserTie } from "react-icons/fa6";
 import { IoFootball } from "react-icons/io5";
 
 interface CardProps {
-  icon: React.ReactNode;
+  icon: any;
   title: string;
 }
 
